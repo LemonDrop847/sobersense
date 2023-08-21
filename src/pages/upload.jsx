@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useReactMediaRecorder } from "react-media-recorder";
 import Webcam from "react-webcam";
+import axios from "axios";
 
 const WebcamComponent = () => <Webcam />;
 const videoConstraints = {
@@ -19,33 +20,7 @@ export default function upload() {
   const [minute, setMinute] = useState("00");
   const [isActive, setIsActive] = useState(false);
   const [counter, setCounter] = useState(0);
-  useEffect(() => {
-    let intervalId;
-
-    if (isActive) {
-      intervalId = setInterval(() => {
-        const secondCounter = counter % 60;
-        const minuteCounter = Math.floor(counter / 60);
-
-        let computedSecond =
-          String(secondCounter).length === 1
-            ? `0${secondCounter}`
-            : secondCounter;
-        let computedMinute =
-          String(minuteCounter).length === 1
-            ? `0${minuteCounter}`
-            : minuteCounter;
-
-        setSecond(computedSecond);
-        setMinute(computedMinute);
-
-        setCounter((counter) => counter + 1);
-      }, 1000);
-    }
-
-    return () => clearInterval(intervalId);
-  }, [isActive, counter]);
-
+  
   function stopTimer() {
     setIsActive(false);
     setCounter(0);
@@ -64,7 +39,48 @@ export default function upload() {
     echoCancellation: true,
   });
   console.log("url", mediaBlobUrl);
-  const [textData,setText]=useState("daushdashbdjadfbjdj b uasdbfajsa nhe ajhfeah  aef a hef a fae fbae bfuabcja cvbnjcv acvajoaabvad sfb as bfja fasunc as sj afjsfbj shdausnd dbsadubnas daduiasds dus ad bsd aun ");
+  const [phrase,setPhrase]=useState("");
+  const getPhrase=async()=>{
+    try {
+      console.log("check1")
+      const response= await axios.get("https://optimal-oyster-central.ngrok-free.app/getPhrase");
+      console.log(import.meta.env.VITE_APP_BACKEND_URL);
+      console.log("res")
+      console.log(response.data);
+      setPhrase("hello");
+    } catch (err) {
+      console.log("error is : "+err.message)
+    }
+  }
+  // const handleClick=()=>{
+    //   getPhrase();
+    // }
+    useEffect(() => {
+      let intervalId;
+  
+      if (isActive) {
+        intervalId = setInterval(() => {
+          const secondCounter = counter % 60;
+          const minuteCounter = Math.floor(counter / 60);
+  
+          let computedSecond =
+            String(secondCounter).length === 1
+              ? `0${secondCounter}`
+              : secondCounter;
+          let computedMinute =
+            String(minuteCounter).length === 1
+              ? `0${minuteCounter}`
+              : minuteCounter;
+  
+          setSecond(computedSecond);
+          setMinute(computedMinute);
+  
+          setCounter((counter) => counter + 1);
+        }, 1000);
+      }
+  
+      return () => clearInterval(intervalId);
+    }, [isActive, counter,phrase]);
   return (
     <div style={{
       marginBottom:"100px"
@@ -125,9 +141,13 @@ export default function upload() {
         >
           <div className="row">
             <h2 style={{paddingTop:"20px"}}>Text to read</h2>
-            <p>
-              {textData}
-            </p>
+            {phrase==""?(<div>
+              <h3>Click to get a Phrase</h3>
+              <button onClick={getPhrase}>Get A Phrase</button>
+            </div>):(<p>
+              {phrase}
+            </p>)}
+            
           </div>
           <div className="row">
             <div
