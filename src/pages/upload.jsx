@@ -65,7 +65,9 @@ export default function upload() {
   });
   console.log("url", mediaBlobUrl);
   return (
-    <div>
+    <div style={{
+      marginBottom:"100px"
+    }}>
       <h2 className="mb-5 text-center">
         Check for drunk or not?
       </h2>
@@ -87,7 +89,7 @@ export default function upload() {
                 videoConstraints={videoConstraints}
               />
             ) : (
-              <img src={picture} />
+              <img style={{maxWidth:"400px"}} src={picture} />
             )}
           </div>
           <div>
@@ -121,7 +123,7 @@ export default function upload() {
           }}
         >
           <div className="row">
-            <h2>Text to read</h2>
+            <h2 style={{paddingTop:"20px"}}>Text to read</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
               sunt earum corporis deleniti, ipsa porro minima sed vero. Neque
@@ -158,17 +160,23 @@ export default function upload() {
                   {status}
                 </h4>
               </div>
-              <div style={{ height: "38px" }}>
+              <div className="row">
+
+              <div className="col-7" style={{ height: "38px",width:"50px" }}>
                 {" "}
                 <video src={mediaBlobUrl} controls loop />
               </div>
 
               <div
-                className="col-md-6 col-md-offset-3"
+                className="col-6"
                 style={{
                   backgroundColor: "black",
                   color: "white",
                   marginLeft: "357px",
+                  marginTop:"10px",
+                  height:"300px",
+                  borderRadius:"12px",
+                  padding:"10px"
                 }}
               >
                 <button
@@ -187,7 +195,7 @@ export default function upload() {
                   <span className="second">{second}</span>
                 </div>
 
-                <div style={{ marginLeft: "20px", display: "flex" }}>
+                <div style={{ marginLeft: "20px", display: "flex",textAlign:"center" }}>
                   <label
                     style={{
                       fontSize: "15px",
@@ -196,10 +204,11 @@ export default function upload() {
                     }}
                     htmlFor="icon-button-file"
                   >
-                    <h3 style={{ marginLeft: "15px", fontWeight: "normal" }}>
-                      Press the Start to record
+                    <h3 style={{ marginLeft: "15px", fontWeight: "normal", color:"white",margin:"2px" }}>
+                      Click "Start"
                     </h3>
-
+                    <br />
+                    <br />
                     <div>
                       <button
                         style={{
@@ -252,6 +261,7 @@ export default function upload() {
                   </label>
                 </div>
                 <b></b>
+              </div>
               </div>
             </div>
           </div>
