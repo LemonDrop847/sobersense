@@ -5,6 +5,10 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg bg-white shadow py-3 sticky-top">
         <div className="container">
             <Link className="navbar-brand" href="#">
+            <h1 style={{fontWeight:"lighter"}}>
+
+            SoberSense.ai
+            </h1>
             </Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
