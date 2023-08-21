@@ -6,6 +6,7 @@ import soyam from "../assets/soyam-pic.jpg";
 import nitin from "../assets/nitin.jfif";
 import three from "../assets/3.png";
 import "./styles/home.css";
+import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div className="container-fluid home">
@@ -19,9 +20,9 @@ export default function Home() {
                   <h1 className="display-1 my-3 fw-bold text-white">
                     Your Shield Against Drunk Driving
                   </h1>
-                  <a href="#" className="btn btn-brand">
+                  <Link to="/upload" className="btn btn-brand">
                     Get started
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -35,9 +36,9 @@ export default function Home() {
                   <h1 className="display-1 my-3 fw-bold text-white">
                     Innovating Roadway Vigilance
                   </h1>
-                  <a href="#" className="btn btn-brand">
+                  <Link to="/upload" className="btn btn-brand">
                     Get started
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

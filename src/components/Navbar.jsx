@@ -1,12 +1,13 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 export default function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-white shadow py-3 sticky-top">
         <div className="container">
-            <a className="navbar-brand" href="#">
-            </a>
+            <Link className="navbar-brand" href="#">
+            </Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -15,20 +16,20 @@ export default function Navbar() {
                 <ul className="navbar-nav mx-auto">
 
                     <li className="nav-item">
-                        <a className="nav-link" href="#heroSlider">Home</a>
+                        <Link className="nav-link" to="/">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#about">About</a>
+                        <Link className="nav-link" to="/#about">About</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#team">The Team</a>
+                        <Link className="nav-link" href="#team">The Team</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#footerr">Contact Us</a>
+                        <Link className="nav-link" href="#footerr">Contact Us</Link>
                     </li>
                     
                 </ul>
-                <a href="#" className="btn btn-brand">Report an incident</a>
+                <Link href="#" className="btn btn-brand">Report an incident</Link>
             </div>
         </div>
     </nav>
