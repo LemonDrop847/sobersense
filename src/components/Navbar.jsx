@@ -1,9 +1,7 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 
 export default function Navbar() {
   return (
-    <div>
       <nav className="navbar navbar-expand-lg bg-white shadow py-3 sticky-top">
         <div className="container">
             <Link className="navbar-brand" href="#">
@@ -15,7 +13,7 @@ export default function Navbar() {
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav mx-auto">
 
-                    <li className="nav-item">
+                    <li className="nav-item" >
                         <Link className="nav-link" to="/">Home</Link>
                     </li>
                     <li className="nav-item">
@@ -33,6 +31,5 @@ export default function Navbar() {
             </div>
         </div>
     </nav>
-    </div>
   )
 }
