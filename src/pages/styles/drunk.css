@@ -1,0 +1,27 @@
+.btn {
+    border-radius: 0;
+    padding: 14px 38px;
+}
+
+.btn-brand {
+    color: #fff;
+    font-weight: 500;
+    border-color: #ef4136;
+    background-color: #ef4136;
+}
+
+.btn-brand:hover {
+    border-color: #000000cc;
+    background-color: #000000cc;
+    color: #fff;
+}
+
+.img-fluid{
+    width: 600px;
+    height: 400px;
+    margin: 20px;
+}
+
+h2{
+    padding-top: 100px;
+}
