@@ -4,6 +4,7 @@ import Home from "./pages/home";
 import Upload from "./pages/upload";
 import Drunk from "./pages/drunk";
 import Sober from "./pages/sober";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (

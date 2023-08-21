@@ -7,7 +7,7 @@ const videoConstraints={
   height:400,
   facingMode:'user',
 }
-export default function upload() {
+export default function CapturePic() {
   const [picture,setPicture]=useState('');
   const webcamRef=React.useRef(null);
   const capture = React.useCallback(() => {
@@ -17,11 +17,9 @@ export default function upload() {
   return (
     <div>
       <h2 className="mb-5 text-center">
-        React Photo Capture using Webcam Example
+        React Photo Capture using Webcam Examle
       </h2>
       <div>
-
-      <div className="m-10">
         {picture == '' ? (
           <Webcam
             audio={false}
@@ -57,7 +55,6 @@ export default function upload() {
             Capture
           </button>
         )}
-      </div>
       </div>
     </div>
   )
