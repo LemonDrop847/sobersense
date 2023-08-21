@@ -7,9 +7,12 @@ import nitin from "../assets/nitin.jfif";
 import three from "../assets/3.png";
 import "./styles/home.css";
 import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
 export default function Home() {
   return (
-    <div className="container-fluid home">
+    <div className="container-fluid home" style={{
+      padding:"0"
+    }}>
       <div id="heroSlider" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-inner">
           <div className="carousel-item text-center bg-cover vh-100 active slide-1">
@@ -106,9 +109,9 @@ export default function Home() {
             </div>
           </div>
           <div className="row gy-4">
-            <div className="col-lg-3 col-sm-6">
+            <div className="col-lg-3 col-sm-6" >
               <div className="team-member px-4 py-5 border shadow-on-hover text-center">
-                <img src={nitin} />
+                <img src={nitin} style={{height:"170px"}} />
                 <div className="team-member-content">
                   <h4 className="mb-0 mt-4">Nitin Mishra</h4>
                 </div>
@@ -116,7 +119,7 @@ export default function Home() {
             </div>
             <div className="col-lg-3 col-sm-6">
               <div className="team-member px-4 py-5 border shadow-on-hover text-center">
-                <img src={soyam} />
+                <img src={soyam} style={{height:"170px"}} />
                 <div className="team-member-content">
                   <h4 className="mb-0 mt-4">Soyam Prabha Mallick</h4>
                 </div>
@@ -124,7 +127,7 @@ export default function Home() {
             </div>
             <div className="col-lg-3 col-sm-6">
               <div className="team-member px-4 py-5 border shadow-on-hover text-center">
-                <img src={srusti} />
+                <img src={srusti} style={{height:"170px"}} />
                 <div className="team-member-content">
                   <h4 className="mb-0 mt-4">Srusti S. Prusty</h4>
                 </div>
@@ -132,7 +135,7 @@ export default function Home() {
             </div>
             <div className="col-lg-3 col-sm-6">
               <div className="team-member px-4 py-5 border shadow-on-hover text-center">
-                <img src={anil} />
+                <img src={anil} style={{height:"170px"}}/>
                 <div className="team-member-content">
                   <h4 className="mb-0 mt-4">Anil Kumar Behera</h4>
                 </div>
