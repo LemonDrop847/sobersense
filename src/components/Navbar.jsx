@@ -14,16 +14,16 @@ export default function Navbar() {
                 <ul className="navbar-nav mx-auto">
 
                     <li className="nav-item" >
-                        <Link className="nav-link" to="/">Home</Link>
+                        <a className="nav-link" href="/">Home</a>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/#about">About</Link>
+                        <a className="nav-link" href="/#about">About</a>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" href="#team">The Team</Link>
+                        <a className="nav-link" href="#team">The Team</a>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" href="#footerr">Contact Us</Link>
+                        <a className="nav-link" href="#footerr">Contact Us</a>
                     </li>
                     
                 </ul>
