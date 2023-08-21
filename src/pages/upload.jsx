@@ -64,6 +64,7 @@ export default function upload() {
     echoCancellation: true,
   });
   console.log("url", mediaBlobUrl);
+  const [textData,setText]=useState("daushdashbdjadfbjdj b uasdbfajsa nhe ajhfeah  aef a hef a fae fbae bfuabcja cvbnjcv acvajoaabvad sfb as bfja fasunc as sj afjsfbj shdausnd dbsadubnas daduiasds dus ad bsd aun ");
   return (
     <div style={{
       marginBottom:"100px"
@@ -125,12 +126,7 @@ export default function upload() {
           <div className="row">
             <h2 style={{paddingTop:"20px"}}>Text to read</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-              sunt earum corporis deleniti, ipsa porro minima sed vero. Neque
-              quisquam exercitationem fugit inventore eligendi nemo sequi
-              commodi beatae. Vero tempora, quam temporibus quia dolor explicabo
-              dolores modi iusto sint dignissimos aut, repellendus libero! Eaque
-              aperiam ipsum consectetur. Veniam, non obcaecati.
+              {textData}
             </p>
           </div>
           <div className="row">
