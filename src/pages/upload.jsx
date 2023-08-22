@@ -147,7 +147,9 @@ export default function Upload() {
             {phrase === "" ? (
               <div>
                 <h3>Click to get a Phrase</h3>
-                <button onClick={getPhrase}>Get A Phrase</button>
+                <button className="btn btn-dark " onClick={getPhrase}>
+                  Get A Phrase
+                </button>
               </div>
             ) : (
               <p>{phrase}</p>
@@ -159,7 +161,9 @@ export default function Upload() {
                 setRecordedBlob={setRecordedBlob}
                 setRecordingStatus={setRecordingStatus}
               />
-              <button onClick={handleSubmit}>Submit</button>
+              <button className="btn btn-success" onClick={handleSubmit}>
+                Submit
+              </button>
             </div>
           </div>
         </div>

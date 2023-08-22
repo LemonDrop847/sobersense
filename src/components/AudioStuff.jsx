@@ -27,49 +27,51 @@ export default class AudioStuff extends Component {
   }
 
   render() {
-    const { status,audioSrc } = this.state;
+    const { status, audioSrc } = this.state;
     const audioProps = {
       audioType: "audio/wav",
       status,
       audioSrc,
-      timeslice: 1000, 
-      startCallback: e => {
+      timeslice: 1000,
+      startCallback: (e) => {
         console.log("succ start", e);
       },
-      pauseCallback: e => {
+      pauseCallback: (e) => {
         console.log("succ pause", e);
       },
-      stopCallback: e => {
+      stopCallback: (e) => {
         this.setState({
-          audioSrc: window.URL.createObjectURL(e)
+          audioSrc: window.URL.createObjectURL(e),
         });
         console.log("succ stop", e);
         this.props.setRecordedBlob(e);
       },
-      onRecordCallback: e => {
+      onRecordCallback: (e) => {
         console.log("recording", e);
       },
-      errorCallback: err => {
+      errorCallback: (err) => {
         console.log("error", err);
-      }
-    
+      },
     };
 
     return (
       <div>
         <AudioAnalyser {...audioProps}>
-          <div className="btn-box">
+          <div className="btn-box p-2">
             <button
-              className="btn"
+              className="btn btn-warning m-2 "
               onClick={() => this.controlAudio("recording")}
             >
               Start
             </button>
-            <button className="btn" onClick={() => this.controlAudio("paused")}>
+            <button
+              className="btn btn-warning m-2"
+              onClick={() => this.controlAudio("paused")}
+            >
               Pause
             </button>
             <button
-              className="btn"
+              className="btn btn-warning m-2"
               onClick={() => this.controlAudio("inactive")}
             >
               Stop
