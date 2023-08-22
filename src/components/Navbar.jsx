@@ -5,6 +5,10 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg bg-white shadow py-3 sticky-top">
         <div className="container">
             <Link className="navbar-brand" href="#">
+            <h1 style={{fontWeight:"lighter"}}>
+
+            SoberSense.ai
+            </h1>
             </Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,16 +18,16 @@ export default function Navbar() {
                 <ul className="navbar-nav mx-auto">
 
                     <li className="nav-item" >
-                        <Link className="nav-link" to="/">Home</Link>
+                        <a className="nav-link" href="/">Home</a>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="/#about">About</Link>
+                        <a className="nav-link" href="/#about">About</a>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" href="#team">The Team</Link>
+                        <a className="nav-link" href="#team">The Team</a>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" href="#footerr">Contact Us</Link>
+                        <a className="nav-link" href="#footerr">Contact Us</a>
                     </li>
                     
                 </ul>

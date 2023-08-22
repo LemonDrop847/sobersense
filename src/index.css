@@ -33,3 +33,8 @@ footer img {
     padding-top: 30px;
     border-top: 1px solid rgba(255, 255, 255, 0.4);
 }
+
+.about{
+    font-family: 'Spline Sans', sans-serif;
+    font-weight: 400;
+}
